@@ -39,9 +39,7 @@ public class FlightScheduleController {
         return ResponseEntity.status(201).body(userService.deleteFlightScheduleByIdUserAndIdFlight(idUser, idFlight));
     }
     @GetMapping("/{idUser}")
-    public ResponseEntity<?> findFlightByIdUser(@PathVariable("idUser")Integer idUser,
-                                                @RequestParam(name = "status",required = false)boolean status,
-                                                @RequestParam(name = "both",required = false)boolean both) {
-        return ResponseEntity.status(201).body(flightService.findAllFlightByIdUser(idUser, status, both));
+    public ResponseEntity<?> findScheduleByIdUser(@PathVariable("idUser")Integer idUser) {
+        return ResponseEntity.status(201).body(new BaseController(201,"Danh sách các chuyến bay",flightRepository.findAllByUsers(userRepository.findById(idUser).get())));
     }
 }

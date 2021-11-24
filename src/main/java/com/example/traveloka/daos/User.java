@@ -52,7 +52,7 @@ public class User {
     private String birthday;
 
     @ManyToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
-//    @JsonIgnore
+    @JsonIgnore
     @JoinTable(name = "flight_schedule",
             joinColumns = @JoinColumn(name = "idUser",referencedColumnName = "idUser"),
             inverseJoinColumns = @JoinColumn(name = "idFlight",referencedColumnName = "idFlight"))
