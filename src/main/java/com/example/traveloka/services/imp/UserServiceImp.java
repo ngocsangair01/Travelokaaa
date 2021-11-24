@@ -9,10 +9,12 @@ import com.example.traveloka.repositories.UserRepository;
 import com.example.traveloka.services.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.*;
 
 @Service
+@CrossOrigin(origins = "*")
 public class UserServiceImp implements IUserService {
 
     @Autowired

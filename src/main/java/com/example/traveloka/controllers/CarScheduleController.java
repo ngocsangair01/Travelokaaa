@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/carschedule")
+@CrossOrigin(origins = "*")
 public class CarScheduleController {
     @Autowired
     private FlightRepository flightRepository;

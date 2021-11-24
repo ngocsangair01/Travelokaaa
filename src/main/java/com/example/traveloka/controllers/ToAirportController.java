@@ -15,6 +15,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/toairport")
+@CrossOrigin(origins = "*")
 public class ToAirportController {
     @Autowired
     private ToAirportRepository toAirportRepository;

@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/flightschedule")
+@CrossOrigin(origins = "*")
 public class FlightScheduleController {
     @Autowired
     private FlightRepository flightRepository;
