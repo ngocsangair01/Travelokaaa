@@ -87,7 +87,7 @@ public class FlightController {
     @GetMapping("/findtravel")  //requestBody CHuyenBAyDTO dto {fromWehre, towhere, classSeat}
     public ResponseEntity<?> findAllFlightByAnyThings(@RequestBody FindFlightDTO dto) {
         List<Flight> flights = flightRepository.findAllByClassSeatAndFromWhereAndToWhere(dto.getClassSeat(),dto.getFromWhere(),dto.getToWhere()); //dtpget
-        if (flights == null) {
+        if (flights.size() == 0) {
             throw new NotFoundException("Không tìm thấy chuyến bay");
         }
         return ResponseEntity.status(201).body(new BaseController(200,"Các chuyến bay thoả mãn",flights));
