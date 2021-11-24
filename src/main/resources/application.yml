@@ -2,10 +2,10 @@ spring:
   banner:
     location: banner.txt
   datasource:
-    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-    url: jdbc:sqlserver://localhost:1433;databaseName=traveloka
-    username: sa
-    password: 123
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://ec2-3-231-112-124.compute-1.amazonaws.com:5432/dcdfha4krk5mlo
+    username: jkhgbojcuyhoap
+    password: d201aa58c333ae1d538cf66e9d507ed42c9ec5b66e9f6f9563b3261ba53de475
   data:
     cassandra:
       schema-action: create_if_not_exists
@@ -17,5 +17,5 @@ spring:
       hibernate:
         globally_quoted_identifiers: true
         enable_lazy_load_no_trans: true
-        dialect: org.hibernate.dialect.SQLServer2012Dialect
+        dialect: org.hibernate.dialect.PostgreSQL92Dialect
 
