@@ -34,7 +34,7 @@ public class UserController {
     }
     @PostMapping("/signup")
     public ResponseEntity<?> createUser(@RequestBody UserDTO userDTO) {
-        User oldUser = userRepository.findByAccount(userDTO.getName());
+        User oldUser = userRepository.findByAccount(userDTO.getAccount());
         if (oldUser != null) {
             throw new DuplicateException("Tài khoản đã tồn tại");
         }
