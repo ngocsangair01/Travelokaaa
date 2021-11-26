@@ -3,9 +3,9 @@ spring:
     location: banner.txt
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://ec2-3-231-112-124.compute-1.amazonaws.com:5432/dcdfha4krk5mlo
-    username: jkhgbojcuyhoap
-    password: d201aa58c333ae1d538cf66e9d507ed42c9ec5b66e9f6f9563b3261ba53de475
+    url: jdbc:postgresql://ec2-52-71-217-158.compute-1.amazonaws.com:5432/d3k6nk0a9j719m
+    username: kfjuvufdcyjaqx
+    password: 28460eed3500db0cd5e20e69bea27da0785daab9ff1d4324e3de1ff5ccbd3e87
   data:
     cassandra:
       schema-action: create_if_not_exists
