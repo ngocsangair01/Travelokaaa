@@ -53,7 +53,7 @@ public class ToAirportController {
         toAirportRepository.deleteById(idToAirport);
         return ResponseEntity.status(200).body("xoá thành công");
     }
-    @GetMapping("/findtoairport")
+    @PostMapping("/findtoairport")
     public ResponseEntity<?> findTheWayToAirport(@RequestBody FindCarDTO findCarDTO) {
         List<ToAirport> toAirports = toAirportRepository.findAllByFromWhereAndToWhere(findCarDTO.getFromWhere(), findCarDTO.getToWhere());
         if (toAirports == null) {

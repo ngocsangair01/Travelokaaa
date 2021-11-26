@@ -84,7 +84,7 @@ public class FlightController {
         }
         return ResponseEntity.status(201).body(flights);
     }
-    @GetMapping("/findtravel")  //requestBody CHuyenBAyDTO dto {fromWehre, towhere, classSeat}
+    @PostMapping("/findtravel")  //requestBody CHuyenBAyDTO dto {fromWehre, towhere, classSeat}
     public ResponseEntity<?> findAllFlightByAnyThings(@RequestBody FindFlightDTO dto) {
         List<Flight> flights = flightRepository.findAllByClassSeatAndFromWhereAndToWhere(dto.getClassSeat(),dto.getFromWhere(),dto.getToWhere()); //dtpget
         if (flights.size() == 0) {
