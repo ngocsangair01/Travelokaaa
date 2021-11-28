@@ -106,9 +106,9 @@ public class UserServiceImp implements IUserService {
             userRepository.save(user);
             toAirportRepository.save(toAirport);
         } catch (Exception e) {
-            return "Đăng kí bay không thành công";
+            return "Đăng kí xe đến sân bay thành công";
         }
-        return "Đăng kí chuyến bay thành công";
+        return "Đăng kí xe đến sân bay không thành công";
     }
 
     @Override

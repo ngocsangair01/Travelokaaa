@@ -56,7 +56,7 @@ public class ToAirportController {
     @PostMapping("/findtoairport")
     public ResponseEntity<?> findTheWayToAirport(@RequestBody FindCarDTO findCarDTO) {
         List<ToAirport> toAirports = toAirportRepository.findAllByFromWhereAndToWhere(findCarDTO.getFromWhere(), findCarDTO.getToWhere());
-        if (toAirports == null) {
+        if (toAirports.size()==0) {
             throw new NotFoundException("Không tìm thấy xe đến sân bay");
         }
         return ResponseEntity.status(201).body(toAirports);
